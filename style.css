@@ -3,6 +3,7 @@
     margin: 0;
     box-sizing: border-box;
     font-family:monospace;
+    font-size: 20px;
 }
 
 .gridContainer {
@@ -18,8 +19,6 @@
     "projectsCV"
     ;
     background-color: burlywood;
-    padding: 10vh;
-    margin: 2vh;
     border: 1px solid black;
     justify-content: center;
 }
@@ -244,4 +243,6 @@
     justify-content: start;
 }
 
-@media and screen (max-width: 700px)
+@media and screen (max-width: 700px) {
+
+}
