@@ -246,9 +246,28 @@
 @media screen and (max-width: 700px) {
     .name {
         font-size:xx-small;
-        top: 11em;
-        left: 0.1em;
+        top: 16em;
+        left: 1em;
     }
+}
+
+@media screen and (max-width: 375px) {
+    .name {
+        font-size:xx-small;
+        top: 13em;
+        left: 1em;
+    }
+}
+
+@media screen and (max-width:350px) {
+    .name {
+        font-size:xx-small;
+        top: 11em;
+        left: 1em;
+    }
+}
+
+@media screen and (max-width: 350px), (max-width: 375), (max-width:700px) {
     .contactCV {
         grid-template-areas:
         "contact"
