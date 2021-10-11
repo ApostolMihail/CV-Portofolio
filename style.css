@@ -243,6 +243,40 @@
     justify-content: start;
 }
 
-@media and screen (max-width: 700px) {
-
+@media screen and (max-width: 700px) {
+    .contactCV {
+        grid-template-areas:
+        "contact"
+        "contactList";
+    }
+    .socialMediaCV {
+        grid-template-areas: 
+        "socialMedia"
+        "linksToSocialMedia";
+    }
+    .educationCV {
+        grid-template-areas: 
+        "education"
+        "educationList";
+    }
+    .workExperienceCV {
+        grid-template-areas: 
+        "workExperience"
+        "workExperienceList";
+    }
+    .languagesCV {
+        grid-template-areas: 
+        "languages"
+        "languagesList";
+    }
+    .skillsCV {
+        grid-template-areas: 
+        "skills"
+        "skillList";
+    }
+    .projectsCV {
+        grid-template-areas: 
+        "projects"
+        "projectsList";
+    }
 }
