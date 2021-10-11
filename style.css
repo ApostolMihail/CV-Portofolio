@@ -1,0 +1,247 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family:monospace;
+}
+
+.gridContainer {
+    display: grid;
+    grid-template-areas:
+    "photo_name"
+    "contactCV"
+    "socialMediaCV"
+    "educationCV"
+    "workExperienceCV"
+    "languagesCV"
+    "skillsCV"
+    "projectsCV"
+    ;
+    background-color: burlywood;
+    padding: 10vh;
+    margin: 2vh;
+    border: 1px solid black;
+    justify-content: center;
+}
+
+.gridItem {
+    padding: 0.5em;
+}
+
+.photo_name {
+    grid-area: photo_name;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+
+.name {
+    color: white;
+    position: relative;
+    width: 12vw;
+    left: 28vw;
+    top: 10vw;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.name p {
+    z-index: 10;
+}
+
+.myName {
+    position: absolute;
+}
+
+.name::before {
+    content: '';
+    position: absolute;
+    width: 20%;
+    height: 200%;
+    transform: rotate(270deg);
+    background:linear-gradient(yellow, red);
+    animation: rotate 3.5s linear infinite;
+}
+
+.name::after {
+    content: '';
+    position: absolute;
+    inset: 3px;
+    background-color:rgb(0, 0, 0);
+    border-radius: 20px;
+}
+
+@keyframes rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.img {
+    position: relative;
+    border-radius: 20px;
+}
+
+.img::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background:radial-gradient( rgba(173, 170, 165, 0.1), rgba(0, 0, 0, 0.5)),
+               linear-gradient(.25turn,rgb(0, 0, 0, 0.1), black);
+    border-radius: 20px;
+}
+
+.photo {
+    width: 42vw;
+    border-radius: 20px;
+}
+
+.contactCV {
+    grid-area: contactCV;
+    display: grid;
+    grid-template-areas: 
+    "contact contactList";
+}
+
+.contact {
+    grid-area: contact;
+}
+
+.contactList {
+    grid-area: contactList;
+}
+
+.socialMediaCV {
+    grid-area: socialMediaCV;
+    display: grid;
+    grid-template-areas: 
+    "socialMedia linksToSocialMedia";
+}
+
+.socialMedia {
+    grid-area: socialMedia;
+}
+
+.linksToSocialMedia {
+    grid-area: linksToSocialMedia;
+    display: flex;
+    flex-direction: row;
+}
+
+.linksToSocialMedia li a {
+    text-decoration: none;
+    margin-right: 10px;
+    color: black;
+}
+
+.educationCV {
+    grid-area: educationCV;
+    display: grid;
+    grid-template-areas: 
+    "education educationList";
+}
+
+.education {
+    grid-area: education;
+}
+
+.workExperienceCV {
+    grid-area: workExperienceCV;
+    display: grid;
+    grid-template-areas: 
+    "workExperience workExperienceList";
+}
+
+.workExperience {
+    grid-area: workExperience;
+}
+
+.workExperienceList {
+    grid-area: workExperienceList;
+}
+
+.languagesCV {
+    grid-area: languagesCV;
+    display: grid;
+    grid-template-areas: 
+    "languages languagesList";
+}
+
+.languages {
+    grid-area: languages;
+}
+
+.languagesList {
+    grid-area: languagesList;
+}
+
+.skillsCV {
+    grid-area: skillsCV;
+    display: grid;
+    grid-template-areas: 
+    "skills skillList";
+}
+
+.skill {
+    grid-area: skills;
+}
+
+.skillList {
+    grid-area: skillList;
+    display: flex;
+    flex-direction: column;
+}
+
+.projectsCV {
+    grid-area: projectsCV;
+    display: grid;
+    grid-template-areas: 
+    "projects projectsList";
+}
+
+.projects {
+    grid-area: projects;
+}
+
+.projectsList {
+    grid-area:projectsList;
+}
+
+.contact,
+.socialMedia,
+.education,
+.workExperience,
+.languages,
+.skills,
+.projects {
+    width: 20vw;
+    border-right: 1px solid black;
+}
+
+.contactList,
+.linksToSocialMedia,
+.educationList,
+.courses,
+.workExperienceList,
+.languagesList,
+.skillList,
+.projectsList {
+    list-style-type: none;
+    margin-left: 0.5em
+}
+
+.contactCV,
+.socialMediaCV,
+.educationCV,
+.workExperienceCV,
+.languagesCV,
+.skillsCV,
+.projectsCV {
+    justify-content: start;
+}
+
+@media and screen (max-width: 700px)
