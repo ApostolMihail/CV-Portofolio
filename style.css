@@ -10,6 +10,7 @@
     display: grid;
     grid-template-areas:
     "photo_name"
+    "aboutCV"
     "contactCV"
     "socialMediaCV"
     "educationCV"
@@ -21,6 +22,11 @@
     background-color: burlywood;
     border: 1px solid black;
     justify-content: center;
+}
+
+.aboutCV {
+    grid-area: aboutCV;
+    width:55vmax;
 }
 
 .gridItem {
@@ -441,5 +447,9 @@
         background-color: black;
         right: 15px;
         filter:blur(45px);
+    }
+    .aboutCV {
+        grid-area: aboutCV;
+        width: 100%;
     }
 }
